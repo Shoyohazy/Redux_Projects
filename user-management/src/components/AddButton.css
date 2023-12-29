@@ -1,0 +1,16 @@
+
+.add-user{
+    /* position: relative; */
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+button{
+    border-style: none;
+}
+img{
+    /* position: absolute; */
+    height: 60px;
+    width: 60px;
+  
+}
