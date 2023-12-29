@@ -3,7 +3,6 @@ import './form.css'
 
 
 function Form() {
-
     const [info , setInfo] = useState({
         name : '',
         email : '',
@@ -13,12 +12,13 @@ function Form() {
     })
 
     const handleChange = (e) =>{
-        const {name , value} = e.target;
+        // const newInfo = e.target;
         setInfo((prev) =>({
             ...prev,
-            [name] : value,
+            [e.target.name] : e.target.value,
         }))
     }
+    console.log(info)
 
   return (
     <div className="form">
@@ -26,7 +26,7 @@ function Form() {
         <form >       
             <div className='labels'>
                 <label>Name : </label>
-                  <input value={info.name} onChange={handleChange} type="text" placeholder="Enter Your Name"/>
+                  <input value={info.name} name='name' onChange={handleChange} type="text" placeholder="Enter Your Name"/>
             </div>
             <div className='labels'>
                 <label>Email :
