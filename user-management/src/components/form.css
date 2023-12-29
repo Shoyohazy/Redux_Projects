@@ -1,0 +1,40 @@
+
+.form{
+    height: 280px;
+    width: 430px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 7px 7px 7px 7px;
+    margin-left: 30%;
+    margin-top: 40px;
+    background-color: aqua;
+}
+
+.form-widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-color: aqua;
+    
+}
+.labels{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    margin-left: 15px;
+    background-color: aliceblue;
+    height: 30px;
+    width: 211px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+label{
+    font-weight: 500;
+    margin-right: 15px;
+    background-color: aqua;
+}
