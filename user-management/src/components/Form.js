@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import './form.css'
+import { useDispatch } from 'react-redux';
+import { addUsers } from '../store/UserReducer';
 
 
 function Form({handleReset}) {
+  const dispatch = useDispatch();
     const [info , setInfo] = useState({
         name : '',
         email : '',
@@ -10,7 +13,6 @@ function Form({handleReset}) {
         age : '',
         department : '',
     })
-    console.log(handleReset)
 
     const handleChange = (e) =>{
         // const newInfo = e.target;
@@ -19,12 +21,16 @@ function Form({handleReset}) {
             [e.target.name] : e.target.value,
         }))
     }
-    console.log(info)
+
+    const handleSubmit = () =>{
+      dispatch(addUsers(info));
+      handleReset();
+    }
 
   return (
     <div className="form">
      <div className='form-widget'>
-        <form >       
+        <form  >       
             <div className='labels'>
                 <label>Name : </label>
                   <input value={info.name} name='name' onChange={handleChange} type="text" placeholder="Enter Your Name"/>
@@ -49,7 +55,7 @@ function Form({handleReset}) {
                 </label>
                   <input value={info.department} name='department' onChange={handleChange}  type="text" placeholder="Department?"/>
              </div>
-             <button  onClick={handleReset} className='submit-button'>
+             <button type='submit'  onClick={handleSubmit} className='submit-button'>
                Submit
              </button>
         </form>
