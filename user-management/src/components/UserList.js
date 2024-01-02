@@ -1,26 +1,37 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUsers } from "../store/UserReducer";
+import './userlist.css'
 
 function UserList() {
   const dispatch = useDispatch();
-  const handleDelete = () =>{
-    dispatch.deleteUsers()
+  const handleDelete = (index) =>{
+    dispatch(deleteUsers(index))
   }
   const users = useSelector((state) => state.users);
-  return (
-    <div>
-      <ul>
-        {users.map((users, index) => 
-          (<li key={index}>
-              <h3>{users.name}</h3>
-              <p>{index + 1}</p>
-              <button>Update</button>
-              <button onClick={handleDelete}>Delete</button>
-          </li>)
-        )}
-      </ul>
-    </div>
-  );
+
+  if(users.length > 0){
+    return (
+      < >
+        <ul>
+          {users.map((users, index) => 
+            (<li className="user-list" key={index}>
+                <div className="userinfo">
+                  <h3 className="index">{index + 1}</h3>
+                  <h3>{users.name}</h3>
+                </div>
+                <div className="userbuttons"> 
+                  <button className="update-button">Update</button>
+                  <button className="delete-button" onClick={() => handleDelete(index)}>Delete</button>
+                </div>
+            </li>)
+          )}
+        </ul>
+      </>
+    );
+  }
+  else{
+    return <h1>No list</h1>
+  }
 }
 
 export default UserList;

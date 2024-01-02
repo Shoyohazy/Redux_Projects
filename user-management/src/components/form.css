@@ -8,20 +8,11 @@
     border-radius: 7px 7px 7px 7px;
     margin-left: 35%;
     margin-top: 40px;
-    background-color: aqua;
+    background-color: rgb(192, 33, 240);
     z-index: 1;
 }
-
-.form-widget{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
-    background-color: aqua;
-    
-}
 .labels{
-    background-color: aqua;
+    background-color:  rgb(192, 33, 240);
     display: flex;
     justify-content: space-between;
 }
@@ -31,24 +22,38 @@ input{
     background-color: aliceblue;
     height: 30px;
     width: 211px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 8px;
+    border-style: none;
+    padding: 10px; 
 }
 
 label{
     font-weight: 500;
     margin-right: 15px;
-    background-color: aqua;
+    background-color:  rgb(192, 33, 240);
+    color: aliceblue ;
 }
 
+.labels{
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+}
 .submit-button{
-    background-color: #04AA6D; /* Green */
+    background-color: #cfe3dc; /* Green */
+    border-radius: 9999px;
     border: none;
-    color: white;
+    color: rgb(12, 11, 11);
     padding: 12px 28px;
     text-align: center;
     text-decoration: none;
     display: flex;
     font-size: 16px;
+    font-weight: 600;
     margin-left: 65%;
-    margin-top: 8px;    
+    margin-top: 16px;    
+}
+.submit-button:hover{
+    cursor: pointer;
+    transition: 1s;
+    background-color:rgb(48, 242, 126) ;
 }

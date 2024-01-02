@@ -5,4 +5,5 @@
 
 .App{
   background-color: azure;
+  min-height: 100vh;
 }

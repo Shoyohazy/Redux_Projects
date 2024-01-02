@@ -11,7 +11,7 @@ const UserReducer = createSlice({
             state.users.push(action.payload);
         },
         deleteUsers(state , action){
-            users.filter((user)=> user != action.payload)
+            state.users.splice(action.payload, 1);
         }
     }
 }
