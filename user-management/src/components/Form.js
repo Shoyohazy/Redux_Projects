@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './form.css'
 
 
-function Form() {
+function Form({handleReset}) {
     const [info , setInfo] = useState({
         name : '',
         email : '',
@@ -10,6 +10,7 @@ function Form() {
         age : '',
         department : '',
     })
+    console.log(handleReset)
 
     const handleChange = (e) =>{
         // const newInfo = e.target;
@@ -31,7 +32,7 @@ function Form() {
             <div className='labels'>
                 <label>Email :
                 </label>
-                  <input value={info.email} onChange={handleChange} type="text" placeholder="Enter Your Email Address"/>
+                  <input value={info.email} name='email' onChange={handleChange} type="text" placeholder="Enter Your Email Address"/>
             </div>
             <div className='labels'>
                 <label htmlFor='contact'>Contact :
@@ -41,13 +42,16 @@ function Form() {
             <div className='labels'>
                 <label>Age :
                 </label>
-                  <input value={info.age} onChange={handleChange} type="text" placeholder="Your Age"/>
+                  <input value={info.age} name='age' onChange={handleChange} type="text" placeholder="Your Age"/>
             </div>          
              <div className='labels'>
                  <label>Department :
                 </label>
-                  <input value={info.department} onChange={handleChange}  type="text" placeholder="Department?"/>
+                  <input value={info.department} name='department' onChange={handleChange}  type="text" placeholder="Department?"/>
              </div>
+             <button  onClick={handleReset} className='submit-button'>
+               Submit
+             </button>
         </form>
     </div>
     </div>

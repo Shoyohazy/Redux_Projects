@@ -1,6 +1,8 @@
 
 * {
   box-sizing: border-box;
-  background-color: rgb(162, 162, 164);
 }
 
+.App{
+  background-color: azure;
+}

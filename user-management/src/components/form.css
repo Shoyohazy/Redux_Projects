@@ -9,6 +9,7 @@
     margin-left: 35%;
     margin-top: 40px;
     background-color: aqua;
+    z-index: 1;
 }
 
 .form-widget{
@@ -37,4 +38,17 @@ label{
     font-weight: 500;
     margin-right: 15px;
     background-color: aqua;
+}
+
+.submit-button{
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin-left: 65%;
+    margin-top: 8px;    
 }
