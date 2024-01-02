@@ -1,17 +1,21 @@
+import { useSelector } from "react-redux";
 
 function UserList() {
+  const users = useSelector((state) => state.users);
   return (
-    <ul>
-      <li>
-        <section>
-          <h3>UserName!</h3>
-          <p>id</p>
-          <button>Update</button>
-          <button>Delete</button>
-        </section>
-      </li>
-    </ul>
-  )
+    <div>
+      <ul>
+        {users.map((users, index) => {
+          <li key={index}>
+              <h3>{users.name}</h3>
+              <p>{index}</p>
+              <button>Update</button>
+              <button>Delete</button>
+          </li>;
+        })}
+      </ul>
+    </div>
+  );
 }
 
 export default UserList;
