@@ -14,11 +14,14 @@ li{
     align-items: center;
     border: 2px solid rgb(177, 164, 164);
     background-color: rgb(222, 216, 216);
-    margin-right: 10%;
+    margin-right: 5%;
 }
 
 .userinfo{
     display: flex;
+    /* justify-content: flex-start; */
+    width: 200px;
+    justify-content: space-between;
     margin-left: 5px;
 }
 .index{
@@ -38,7 +41,7 @@ li{
     margin: 5px;
 }
 
-.user-list>button:hover{
+.userbuttons>button:hover{
     cursor: pointer;
     background-color: rgb(165, 240, 165);
 }

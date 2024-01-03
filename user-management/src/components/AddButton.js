@@ -3,16 +3,19 @@ import "./AddButton.css";
 import addImg from "../assets/add.png";
 import Form from "./Form";
 import UserList from "./UserList";
+import { useDispatch, useSelector } from "react-redux";
+import { changeIsUpdating } from "../store/UserReducer";
 
 function AddButton() {
   const [isActive, setIsActive] = useState(false);
+  const isUpdating = useSelector((state) => state.isUpdating)
+  const dispatch = useDispatch()
   function handleClick() {
-    setIsActive(true);
+    // setIsActive((preIsActive) => !preIsActive);
+    dispatch(changeIsUpdating());
+    
   }
 
-  function handleReset(){
-    setIsActive(false); 
-  }
 
   return (
     <>
@@ -21,7 +24,7 @@ function AddButton() {
           <img src={addImg} alt="add-users" />
         </button>
       </div>
-      {isActive ? <Form handleReset = {handleReset} /> : <UserList />}
+      {isUpdating ? <Form handleReset = {handleClick} /> : <UserList />}
     </>
   );
 }
