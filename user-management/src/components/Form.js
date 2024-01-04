@@ -6,7 +6,6 @@ import { addUsers, changeIsUpdating, deleteUpdatedUser, updateUsers } from '../s
 function Form({handleReset}) {
   const dispatch = useDispatch();
   const updateUser = useSelector((state) => state.updateUser);
-  const isUpdating = useSelector((state)=> state.isUpdating)
   
     function handleSubmit(e){
       e.preventDefault()
@@ -30,7 +29,7 @@ function Form({handleReset}) {
         <form autoComplete='true' onSubmit={handleSubmit}>       
             <div className='labels' >
                 <label htmlFor='name'>Name : </label>
-                  <input  name='name'  type="text" placeholder="Enter Your Name" required minLength={3}/>
+                  <input  name='name'   type="text" placeholder="Enter Your Name" required minLength={3}/>
             </div>
             <div className='labels'>
                 <label htmlFor='email'>Email :

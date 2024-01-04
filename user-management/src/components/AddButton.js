@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import "./AddButton.css";
 import addImg from "../assets/add.png";
 import Form from "./Form";
@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeIsUpdating } from "../store/UserReducer";
 
 function AddButton() {
-  const [isActive, setIsActive] = useState(false);
+  //const [isActive, setIsActive] = useState(false);
   const isUpdating = useSelector((state) => state.isUpdating)
   const dispatch = useDispatch()
   function handleClick() {
