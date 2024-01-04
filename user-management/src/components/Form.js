@@ -30,27 +30,27 @@ function Form({handleReset}) {
         <form autoComplete='true' onSubmit={handleSubmit}>       
             <div className='labels' >
                 <label htmlFor='name'>Name : </label>
-                  <input  name='name'  type="text" placeholder="Enter Your Name"/>
+                  <input  name='name'  type="text" placeholder="Enter Your Name" required minLength={3}/>
             </div>
             <div className='labels'>
                 <label htmlFor='email'>Email :
                 </label>
-                  <input  name='email'  type="text" placeholder="Enter Your Email Address"/>
+                  <input  name='email'  type="email" placeholder="Enter Your Email Address" required/>
             </div>
             <div className='labels'>
                 <label htmlFor='contact'>Contact :
                 </label>
-                  <input    name='contact' type="text" placeholder="Contact No."/>
+                  <input    name='contact' type="text" placeholder="Contact No." required/>
             </div>
             <div className='labels'>
                 <label htmlFor='age'>Age :
                 </label>
-                  <input  name='age'  type="text" placeholder="Your Age"/>
+                  <input  name='age'  type="number" placeholder="Your Age" required/>
             </div>          
              <div className='labels'>
                  <label htmlFor='department'>Department :
                  </label>
-                  <input name='department'   type="text" placeholder="Department?"/>
+                  <input name='department'   type="text" placeholder="Department?" minLength={3} required/>
              </div>
              <button type='submit' className='submit-button'>
                Submit
